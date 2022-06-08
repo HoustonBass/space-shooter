@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyo6ns0bkw7dh"]
+
+[ext_resource type="Script" path="res://Instances/Weapons/WeaponPoint.gd" id="1_1rie4"]
+[ext_resource type="PackedScene" uid="uid://b7btissj454f6" path="res://Instances/Weapons/Laser.tscn" id="2_ni8r7"]
+
+[node name="WeaponPoint" type="Position2D"]
+script = ExtResource( "1_1rie4" )
+weapon = ExtResource( "2_ni8r7" )
+
+[node name="RangeFinderR" type="RayCast2D" parent="."]
+position = Vector2(0, 5)
+target_position = Vector2(0, 0)
+collision_mask = 3
+
+[node name="RangeFinderL" type="RayCast2D" parent="."]
+position = Vector2(0, -5)
+target_position = Vector2(0, 0)
+collision_mask = 2
+
+[node name="WeaponCooldownTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="WeaponCooldownTimer" to="." method="_on_weapon_cooldown_timer_timeout"]

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://d1f066417jc5t"]
+
+[ext_resource type="Script" path="res://Data/EnemyData.gd" id="1_rk3n8"]
+
+[resource]
+script = ExtResource( "1_rk3n8" )
+health = 20.0
+max_health = 10.0
+speed = 60.0
+fire_cooldown = 2.0
+max_range = 200.0

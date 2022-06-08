@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://d3d4m087lgjw7"]
+
+[ext_resource type="Resource" uid="uid://cidi05hmqryuw" path="res://Resource/Levels/Pattern_1.tres" id="1_55ue0"]
+[ext_resource type="Script" path="res://Data/LevelData/LevelData.gd" id="1_oggak"]
+
+[resource]
+script = ExtResource( "1_oggak" )
+enemies = [ExtResource( "1_55ue0" )]
+max_spawn_cooldown = 0.25

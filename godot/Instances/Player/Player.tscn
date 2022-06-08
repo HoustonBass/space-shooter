@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bv1rottox3i7o"]
+
+[ext_resource type="Script" path="res://Instances/Player/Player.gd" id="1_yykqe"]
+[ext_resource type="Texture2D" uid="uid://d3m6twvmtr0th" path="res://Assets/Instances/Player/green - triangle.svg" id="2_ik77s"]
+[ext_resource type="Resource" uid="uid://ckr1r80ptks37" path="res://Resource/Player_data.tres" id="2_ofsjb"]
+[ext_resource type="PackedScene" uid="uid://dyo6ns0bkw7dh" path="res://Instances/Weapons/WeaponPoint.tscn" id="3_h527x"]
+
+[node name="Player" type="CharacterBody2D" groups=["players"]]
+collision_mask = 6
+motion_mode = 1
+script = ExtResource( "1_yykqe" )
+player_data = ExtResource( "2_ofsjb" )
+
+[node name="HitBox" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(19, 0, -19, -25, -19, 25)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.1, 0.1)
+texture = ExtResource( "2_ik77s" )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
+
+[node name="WeaponPoint" parent="." instance=ExtResource( "3_h527x" )]
+position = Vector2(23, 0)

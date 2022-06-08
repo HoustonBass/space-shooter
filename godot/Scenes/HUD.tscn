@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=3 uid="uid://iduppglwk6c4"]
+
+[ext_resource type="Script" path="res://Scenes/ProgressBar.gd" id="1_u2uai"]
+[ext_resource type="Resource" uid="uid://ckr1r80ptks37" path="res://Resource/Player_data.tres" id="2_mrqiq"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_aanas"]
+bg_color = Color(0, 0.788235, 0.211765, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="HUD" type="CanvasLayer"]
+
+[node name="LevelLabel" type="Label" parent="."]
+offset_left = 325.0
+offset_top = 8.0
+offset_right = 415.0
+offset_bottom = 53.0
+theme_override_font_sizes/font_size = 30
+text = " Level: "
+
+[node name="LevelIndicator" type="Label" parent="."]
+offset_left = 419.0
+offset_top = 8.0
+offset_right = 459.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 30
+text = "1"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 261.0
+offset_bottom = 80.0
+
+[node name="HP" type="HBoxContainer" parent="VBoxContainer"]
+offset_right = 261.0
+offset_bottom = 38.0
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="HealthLabel" type="Label" parent="VBoxContainer/HP"]
+offset_right = 48.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 25
+text = " HP:"
+
+[node name="HealthBar" type="ProgressBar" parent="VBoxContainer/HP"]
+offset_left = 58.0
+offset_right = 261.0
+offset_bottom = 38.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/fg = SubResource( "StyleBoxFlat_aanas" )
+value = 50.0
+script = ExtResource( "1_u2uai" )
+player_data = ExtResource( "2_mrqiq" )
+
+[node name="Money" type="HBoxContainer" parent="VBoxContainer"]
+offset_top = 42.0
+offset_right = 261.0
+offset_bottom = 80.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="MoneyLabel" type="Label" parent="VBoxContainer/Money"]
+offset_right = 49.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 25
+text = "    $:"
+vertical_alignment = 1
+
+[node name="Money" type="Label" parent="VBoxContainer/Money"]
+offset_left = 59.0
+offset_right = 73.0
+offset_bottom = 38.0
+theme_override_font_sizes/font_size = 25
+text = "0"

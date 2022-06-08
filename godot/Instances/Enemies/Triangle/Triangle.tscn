@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://wm6wij6airkb"]
+
+[ext_resource type="Script" path="res://Instances/Enemies/Triangle/Triangle.gd" id="1_dihxb"]
+[ext_resource type="Resource" uid="uid://d1f066417jc5t" path="res://Resource/Enemy/default_triangle.tres" id="2_sfv8d"]
+[ext_resource type="Texture2D" uid="uid://dgaxu6y6e3gqm" path="res://Assets/Instances/Enemy/triangle.svg" id="3_6rf6i"]
+[ext_resource type="PackedScene" uid="uid://dyo6ns0bkw7dh" path="res://Instances/Weapons/WeaponPoint.tscn" id="4_gi1py"]
+
+[node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
+collision_layer = 2
+collision_mask = 7
+script = ExtResource( "1_dihxb" )
+enemy_data = ExtResource( "2_sfv8d" )
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5708
+scale = Vector2(0.1, 0.1)
+texture = ExtResource( "3_6rf6i" )
+
+[node name="WeaponPoint" parent="." instance=ExtResource( "4_gi1py" )]
+position = Vector2(25, 0)
+
+[node name="HitBox" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(25, 0, -25, -25, -25, 25)

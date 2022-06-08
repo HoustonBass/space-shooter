@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://cidi05hmqryuw"]
+
+[ext_resource type="Script" path="res://Data/LevelData/PatternData.gd" id="1_igbhj"]
+
+[resource]
+script = ExtResource( "1_igbhj" )
+pattern = [0]
+length = 0
