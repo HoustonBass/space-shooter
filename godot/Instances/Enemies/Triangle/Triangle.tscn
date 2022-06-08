@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dgaxu6y6e3gqm" path="res://Assets/Instances/Enemy/triangle.svg" id="3_6rf6i"]
 [ext_resource type="PackedScene" uid="uid://dyo6ns0bkw7dh" path="res://Instances/Weapons/WeaponPoint.tscn" id="4_gi1py"]
 
-[node name="Enemy" type="CharacterBody2D" groups=["enemy"]]
+[node name="Enemy" type="CharacterBody2D" groups=["enemies"]]
 collision_layer = 2
 collision_mask = 7
 script = ExtResource( "1_dihxb" )
@@ -21,3 +21,5 @@ position = Vector2(25, 0)
 
 [node name="HitBox" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(25, 0, -25, -25, -25, 25)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

@@ -4,8 +4,8 @@ extends Node2D
 
 @onready var timer = $WeaponCooldownTimer
 @onready var root = get_tree().get_root()
-@onready var range_finder_r = $RangeFinderR
-@onready var range_finder_l = $RangeFinderL
+@onready var range_finder_r: RayCast2D = $RangeFinderR
+@onready var range_finder_l: RayCast2D = $RangeFinderL
 
 var can_fire = true
 var automatic = false
@@ -55,5 +55,3 @@ func fire_bullet():
 	root.add_child(bullet)
 	can_fire = false
 	timer.start()
-
-Vector2.INF
