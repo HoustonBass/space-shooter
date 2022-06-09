@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://wm6wij6airkb"]
 
 [ext_resource type="Script" path="res://Instances/Enemies/Triangle/Triangle.gd" id="1_dihxb"]
-[ext_resource type="Resource" uid="uid://d1f066417jc5t" path="res://Resource/Enemy/default_triangle.tres" id="2_sfv8d"]
+[ext_resource type="Resource" path="res://Resource/Enemy/default_triangle.tres" id="2_sfv8d"]
 [ext_resource type="Texture2D" uid="uid://dgaxu6y6e3gqm" path="res://Assets/Instances/Enemy/triangle.svg" id="3_6rf6i"]
 [ext_resource type="PackedScene" uid="uid://dyo6ns0bkw7dh" path="res://Instances/Weapons/WeaponPoint.tscn" id="4_gi1py"]
 

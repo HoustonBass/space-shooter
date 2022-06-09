@@ -1,11 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dmjib81akxdkr"]
+[gd_scene load_steps=8 format=3]
 
 [ext_resource type="PackedScene" uid="uid://bv1rottox3i7o" path="res://Instances/Player/Player.tscn" id="1_ijajp"]
 [ext_resource type="Script" path="res://Scenes/Level.gd" id="1_qbh0j"]
 [ext_resource type="PackedScene" uid="uid://c2wfq8dyym4k5" path="res://Instances/Enemies/Director/TheDirector.tscn" id="2_bkh0r"]
 [ext_resource type="Resource" uid="uid://d3d4m087lgjw7" path="res://Resource/Levels/Level_1.tres" id="3_1ceja"]
 [ext_resource type="PackedScene" uid="uid://wm6wij6airkb" path="res://Instances/Enemies/Triangle/Triangle.tscn" id="6_n1fbi"]
-[ext_resource type="PackedScene" uid="uid://iduppglwk6c4" path="res://Scenes/HUD.tscn" id="6_qj1st"]
+[ext_resource type="PackedScene" uid="uid://bcqovbqyget8q" path="res://Scenes/HUD/HUD.tscn" id="6_qj1st"]
 
 [sub_resource type="Environment" id="Environment_ktclx"]
 glow_enabled = true

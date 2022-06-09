@@ -12,7 +12,12 @@ _global_script_classes=[{
 "base": "EntityData",
 "class": &"EnemyData",
 "language": &"GDScript",
-"path": "res://Data/EnemyData.gd"
+"path": "res://Data/Instances/EnemyData.gd"
+}, {
+"base": "Entity",
+"class": &"EnemyEntity",
+"language": &"GDScript",
+"path": "res://Instances/EnemyEntity.gd"
 }, {
 "base": "CharacterBody2D",
 "class": &"Entity",
@@ -22,7 +27,7 @@ _global_script_classes=[{
 "base": "Resource",
 "class": &"EntityData",
 "language": &"GDScript",
-"path": "res://Data/EntityData.gd"
+"path": "res://Data/Instances/EntityData.gd"
 }, {
 "base": "Resource",
 "class": &"LevelData",
@@ -37,15 +42,22 @@ _global_script_classes=[{
 "base": "EntityData",
 "class": &"PlayerData",
 "language": &"GDScript",
-"path": "res://Data/PlayerData.gd"
+"path": "res://Data/Instances/PlayerData.gd"
+}, {
+"base": "Resource",
+"class": &"ScoreData",
+"language": &"GDScript",
+"path": "res://Data/ScoreData.gd"
 }]
 _global_script_class_icons={
 "EnemyData": "",
+"EnemyEntity": "",
 "Entity": "",
 "EntityData": "",
 "LevelData": "",
 "PatternData": "",
-"PlayerData": ""
+"PlayerData": "",
+"ScoreData": ""
 }
 
 [application]
@@ -58,6 +70,7 @@ config/features=PackedStringArray("4.0", "Vulkan Clustered")
 [autoload]
 
 Enums="*res://Singleton/Enums.gd"
+ResourceManager="*res://Singleton/ResourceManager.tscn"
 
 [display]
 

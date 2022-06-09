@@ -1,4 +1,4 @@
-extends Entity
+extends EnemyEntity
 
 @export var enemy_data: Resource = EnemyData
 
@@ -9,6 +9,7 @@ var target: Node2D
 var input_velocity = Vector2(1, 0)
 
 func _ready():
+	super()
 	max_health = enemy_data.max_health
 	health = enemy_data.health
 	get_next_target()

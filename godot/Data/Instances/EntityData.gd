@@ -1,4 +1,5 @@
-class_name EntityData extends Resource
+extends Resource
+class_name EntityData
 
 @export var health: float = 10.0
 @export var max_health: float = 10.0

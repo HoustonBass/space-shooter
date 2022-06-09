@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dhgyk42co3f26"]
+
+[ext_resource type="Script" path="res://Singleton/ResourceManager.gd" id="1_7msvd"]
+[ext_resource type="Resource" uid="uid://y7hdw5ptbqt8" path="res://Resource/Score_data.tres" id="2_0illu"]
+
+[node name="ResourceManager" type="Node"]
+script = ExtResource( "1_7msvd" )
+score_data = ExtResource( "2_0illu" )
