@@ -25,4 +25,4 @@ func fire_weapon():
 	weapon_point.fire_weapon()
 
 func take_hit(damage):
-	player_data.health -= damage
+	player_data.take_damage(damage)

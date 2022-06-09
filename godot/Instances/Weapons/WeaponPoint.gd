@@ -36,11 +36,11 @@ func is_range_clear() -> bool:
 	if range_finder_r.is_colliding() or range_finder_l.is_colliding():
 		var e = range_finder_r.get_collider()
 		var e2 = range_finder_l.get_collider()
+		#might be a bug here somewhere
+		#i think the enemies sometimes hit each other
 		if check(e, 'enemies') or check(e2, 'enemies'):
-			print('found an enemy, hold fire!')
 			return false
 		if check(e, 'players') or check(e2, 'players'):
-			print('the whites of the eyes, fire!!')
 			return true
 	return false
 
