@@ -1,9 +1,10 @@
-[gd_resource type="Resource" load_steps=2 format=3]
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://hh46ljvi3x23"]
 
 [ext_resource type="Script" path="res://Data/Instances/PlayerData.gd" id="1_dr2c0"]
 
 [resource]
 script = ExtResource( "1_dr2c0" )
-speed = 100
-max_health = 100.0
 health = 100.0
+max_health = 100.0
+speed = 75.0
+fire_cooldown = 0.3

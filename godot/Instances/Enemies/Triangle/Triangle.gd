@@ -6,7 +6,7 @@ extends EnemyEntity
 
 var target: Node2D
 
-var input_velocity = Vector2(1, 0)
+var input_velocity = Vector2(1, 0) #unit vector used in movement, scales speed
 
 func _ready():
 	super()
@@ -14,7 +14,7 @@ func _ready():
 	health = enemy_data.health
 	get_next_target()
 	weapon_point.set_fire_mode(true)
-	weapon_point.set_fire_rate(enemy_data.fire_cooldown)
+	weapon_point.set_reload_time(enemy_data.fire_cooldown)
 	weapon_point.set_range(enemy_data.max_range)
 
 func get_next_target():

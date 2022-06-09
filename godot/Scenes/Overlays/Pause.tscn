@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c3gq3tsv1a11f"]
+
+[node name="Control" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.329412, 0.329412, 0.329412, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 321.0
+offset_top = 237.0
+offset_right = 436.0
+offset_bottom = 295.0
+theme_override_font_sizes/font_size = 40
+text = "Pause"
+
+[node name="PlayButton" type="TextureButton" parent="."]
+offset_left = 407.0
+offset_top = 349.0
+offset_right = 447.0
+offset_bottom = 389.0
+
+[node name="ExitButton" type="TextureButton" parent="."]
+offset_left = 303.0
+offset_top = 348.0
+offset_right = 343.0
+offset_bottom = 388.0

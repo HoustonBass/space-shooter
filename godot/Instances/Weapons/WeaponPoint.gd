@@ -14,7 +14,7 @@ func set_range(_range: float) -> void:
 	range_finder_r.set_target_position(Vector2(_range, range_finder_r.position.y))
 	range_finder_l.set_target_position(Vector2(_range, range_finder_l.position.y))
 
-func set_fire_rate(_rate):
+func set_reload_time(_rate):
 	timer.set_wait_time(_rate)
 
 func set_fire_mode(_automatic: bool) -> void:

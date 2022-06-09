@@ -1,5 +1,5 @@
-class_name PlayerData extends EntityData
-
+class_name PlayerData 
+extends ShipEntityData
 
 signal health_changed
 

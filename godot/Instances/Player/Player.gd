@@ -1,7 +1,10 @@
 extends Entity
 
-@export var player_data: Resource
+@export var player_data: Resource = PlayerData
 @onready var weapon_point = $WeaponPoint
+
+func _ready():
+	weapon_point.set_reload_time(player_data.fire_cooldown)
 
 func _process(_delta):
 	if Input.is_action_pressed('ui_accept'):

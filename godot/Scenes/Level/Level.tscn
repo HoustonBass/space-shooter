@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://cu6wigupgc3q0"]
+
+[ext_resource type="Script" path="res://Scenes/Level/Level.gd" id="1_h6cya"]
+[ext_resource type="PackedScene" path="res://Instances/Enemies/Director/TheDirector.tscn" id="2_k3cp3"]
+[ext_resource type="Resource" path="res://Resource/Levels/Level_1.tres" id="3_nrvqe"]
+[ext_resource type="PackedScene" path="res://Scenes/HUD/HUD.tscn" id="4_vncny"]
+[ext_resource type="PackedScene" path="res://Instances/Player/Player.tscn" id="5_0i0g3"]
+
+[sub_resource type="Environment" id="Environment_ktclx"]
+glow_enabled = true
+glow_hdr_scale = 1.0
+
+[node name="Level" type="Node2D"]
+script = ExtResource( "1_h6cya" )
+
+[node name="TheDirector" parent="." instance=ExtResource( "2_k3cp3" )]
+level_data = ExtResource( "3_nrvqe" )
+
+[node name="Enemies" type="Node" parent="."]
+
+[node name="HUD" parent="." instance=ExtResource( "4_vncny" )]
+
+[node name="Player" parent="." instance=ExtResource( "5_0i0g3" )]
+position = Vector2(3, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+editor_description = "Waiting on bug to be fixed to add glow here"
+environment = SubResource( "Environment_ktclx" )
+
+[connection signal="SpawnEnemy" from="TheDirector" to="." method="_on_the_director_spawn_enemy"]
+[connection signal="SpawningFinished" from="TheDirector" to="." method="_on_the_director_spawning_finished"]

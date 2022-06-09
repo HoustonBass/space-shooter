@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ee2sldho4mlr"]
 
 [ext_resource type="Script" path="res://Scenes/HUD/ProgressBar.gd" id="1_n7ybv"]
-[ext_resource type="Resource" path="res://Resource/Player_data.tres" id="2_jmep5"]
+[ext_resource type="Resource" uid="uid://hh46ljvi3x23" path="res://Resource/Player_data.tres" id="2_jmep5"]
 [ext_resource type="Script" path="res://Scenes/HUD/Score.gd" id="3_27gte"]
 [ext_resource type="Resource" uid="uid://y7hdw5ptbqt8" path="res://Resource/Score_data.tres" id="4_i35tt"]
 
